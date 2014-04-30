@@ -1039,7 +1039,7 @@ class PhoneNumberUtil {
 		if ($find > 0 && $this->isViablePhoneNumber(substr($number, 0, $matches[0][1]))) {
 			// The numbers are captured into groups in the regular expression.
 
-			for ($i = 1, $length = count($matches); $i <= $length; $i++) {
+			for ($i = 1, $length = count($matches); $i < $length; $i++) {
 				if ($matches[$i][0] != "") {
 					// We go through the capturing groups until we find one that captured some digits. If none
 					// did, then we will return the empty string.
